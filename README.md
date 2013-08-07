@@ -8,6 +8,18 @@ $ npm install easypack
 ```
 
 
+Usage
+```
+var sb = require('easypack');
+sb.build({
+  webRoot : 'test',
+	inputHtml : "main.html",
+	outputHtml : "index.html",
+	jsBuildName : "app.js",
+	timeStampBuild : true
+});
+```
+
 ### Warning
 The tool is in its very early stages, so be careful :) 
 
