@@ -4,7 +4,7 @@
   "description": "This is a very, very simple build tool to packege the js and css includes in a html file into one combined js and css (optionally minified) files",
   "main": "./lib/easypack",
   "bin": {
-    "easypack": "easypack.js"
+    "easypack": "./bin/easypack.js"
   },
   "repository": {
     "type": "git",
