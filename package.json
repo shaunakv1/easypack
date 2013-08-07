@@ -1,10 +1,17 @@
 {
   "name": "easypack",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "This is a very, very simple build tool to packege the js and css includes in a html file into one combined js and css (optionally minified) files",
   "main": "./lib/easypack",
   "bin": {
     "easypack": "easypack.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shaunakv1/easypack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shaunakv1/easypack/issues"
   },
   "directories": {
     "test": "test"
@@ -20,6 +27,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "minify",
+    "build",
+    "html",
+    "js",
+    "css",
+    "compressor"
+  ],
   "author": "Shaunak Vairagare",
   "license": "MIT"
 }
