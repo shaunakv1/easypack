@@ -6,6 +6,7 @@ preprocess all the static js and css files before pushing your webpages to produ
 [Easypack](http://shaunakv1.github.io/easypack/) will take your html file, and pickup all the static css and js files you have marked and will join them into single js and css files and will publish a new html file for you. It can also optionally do a simple minify (currently no bells and whistles) on js and css files. 
 
 ###Installation 
+[Download Node.js](http://nodejs.org/download/) if you haven't already. Then inside the webroot directory run:
 ```
 $ npm install easypack
 ```
@@ -20,13 +21,16 @@ Create a build.js file like below and execute it using nodejs
 
 var sb = require('easypack');
 sb.build({
-  	webRoot : 'test',
+  	webRoot : 'yourWebRootDir',
 	inputHtml : "main.html",  
 	outputHtml : "index.html",
 	jsBuildName : "app.js",
 	timeStampBuild : true
 });
 ```
+> Note that if you installed easypack within ther webroot of your website then leave ``` webRoot : '' ``` or donot provide this option. Optionally
+if you installed easypack outside your webroot, then provide a relative or absoloute path to webroot in your build script.
+
 ###Marking scripts for build
 
 Suppose the main html of your web site is main.html here is how to mark the scripts that build tool should bundle into one file.
