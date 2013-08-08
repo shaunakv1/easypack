@@ -37,10 +37,12 @@
 <p>Ever wished you had in your fontend only webprojects, the cool feature of popular web-frameworks like rails that 
 preprocess all the static js and css files before pushing your webpages to production? Thats exactly easypacks does! </p>
 
-<p>Easypack will take your html file, and pickup all the static css and js files you have marked and will join them into single js and css files and will publish a new html file for you. It can also optionally do a simple minify (currently no bells and whistles) on js and css files. </p>
+<p><a href="http://shaunakv1.github.io/easypack/">Easypack</a> will take your html file, and pickup all the static css and js files you have marked and will join them into single js and css files and will publish a new html file for you. It can also optionally do a simple minify (currently no bells and whistles) on js and css files. </p>
 
 <h3>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p><a href="http://nodejs.org/download/">Download Node.js</a> if you haven't already. Then inside the webroot directory run:</p>
 
 <pre><code>$ npm install easypack
 </code></pre>
@@ -56,13 +58,18 @@ preprocess all the static js and css files before pushing your webpages to produ
 
 <span class="kd">var</span> <span class="nx">sb</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'easypack'</span><span class="p">);</span>
 <span class="nx">sb</span><span class="p">.</span><span class="nx">build</span><span class="p">({</span>
-    <span class="nx">webRoot</span> <span class="o">:</span> <span class="s1">'test'</span><span class="p">,</span>
+    <span class="nx">webRoot</span> <span class="o">:</span> <span class="s1">'yourWebRootDir'</span><span class="p">,</span>
     <span class="nx">inputHtml</span> <span class="o">:</span> <span class="s2">"main.html"</span><span class="p">,</span>  
     <span class="nx">outputHtml</span> <span class="o">:</span> <span class="s2">"index.html"</span><span class="p">,</span>
     <span class="nx">jsBuildName</span> <span class="o">:</span> <span class="s2">"app.js"</span><span class="p">,</span>
     <span class="nx">timeStampBuild</span> <span class="o">:</span> <span class="kc">true</span>
 <span class="p">});</span>
 </pre></div>
+
+<blockquote>
+<p>Note that if you installed easypack within ther webroot of your website then leave <code>webRoot : ''</code> or donot provide this option. Optionally
+if you installed easypack outside your webroot, then provide a relative or absoloute path to webroot in your build script.</p>
+</blockquote>
 
 <h3>
 <a name="marking-scripts-for-build" class="anchor" href="#marking-scripts-for-build"><span class="octicon octicon-link"></span></a>Marking scripts for build</h3>
@@ -105,7 +112,26 @@ For example:</p>
 
 <p>Why do this? So that when you push put new code you can be sure that browsers will discard the cached copies of your old code and fetch a new one! </p>
 
-<h3>
+<h2>
+<a name="learn-by-example" class="anchor" href="#learn-by-example"><span class="octicon octicon-link"></span></a>Learn by example</h2>
+
+<ol>
+<li><p>Install <a href="http://nodejs.org/download/">Node.js</a></p></li>
+<li><p>Download <a href="https://github.com/shaunakv1/easypack/archive/examples.zip">examples</a></p></li>
+<li>
+<p>At the same level as the main.html install easypack:</p>
+
+<pre><code>$ npm install easypack 
+</code></pre>
+</li>
+<li>
+<p>Then run the build.js </p>
+
+<pre><code>$ node build.js
+</code></pre>
+</li>
+<li><p>Thats it! You should see a index.html generated alongside main.html. Notice the difference between javascripts and css included between the two. </p></li>
+</ol><h3>
 <a name="warning" class="anchor" href="#warning"><span class="octicon octicon-link"></span></a>Warning</h3>
 
 <p>The tool is in its very early stages, so be careful :) </p>
