@@ -30,6 +30,7 @@ sb.build({
 ###Marking scripts for build
 
 Suppose the main html of your web site is main.html here is how to mark the scripts that build tool should bundle into one file.
+Notice the **data-build="true"** attribute in the script tags. Thats what marks scripts to be picked up. 
 
 ```
 <!-
