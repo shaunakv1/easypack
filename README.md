@@ -70,6 +70,26 @@ For example:
 ```
 Why do this? So that when you push put new code you can be sure that browsers will discard the cached copies of your old code and fetch a new one! 
 
+##Learn by example
+
+1. Install [Node.js](http://nodejs.org/download/)
+
+2. Download [examples](https://github.com/shaunakv1/easypack/archive/examples.zip)
+
+3. At the same level as the main.html install easypack:
+```
+$ npm install easypack 
+```
+
+4. Then run the build.js 
+```
+$ node build.js
+```
+
+5. Thats it! You should see a index.html generated alongside main.html. Notice the difference between javascripts and css included between the two. 
+
+
+
 ### Warning
 The tool is in its very early stages, so be careful :) 
 
