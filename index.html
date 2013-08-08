@@ -36,10 +36,27 @@
 
 <p>This build tool will take you html file, and pickup all the static css and js files you have marked and will join them into single js and css files and will publish a new html file for you. It can also optionally do a simple minify (currently no bells and whistles) on js and css files. </p>
 
+<p>Installation </p>
+
+<pre><code>$ npm install easypack
+</code></pre>
+
+<p>Usage</p>
+
+<pre><code>var sb = require('easypack');
+sb.build({
+  webRoot : 'test',
+    inputHtml : "main.html",
+    outputHtml : "index.html",
+    jsBuildName : "app.js",
+    timeStampBuild : true
+});
+</code></pre>
+
 <h3>
 <a name="warning" class="anchor" href="#warning"><span class="octicon octicon-link"></span></a>Warning</h3>
 
-<p>This tool is still under development and in its very early stages, so be careful :) </p>
+<p>The tool is in its very early stages, so be careful :) </p>
 
 <h3>
 <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
