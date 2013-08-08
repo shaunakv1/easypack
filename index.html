@@ -31,27 +31,60 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="easypack---the-super-simple-js-and-css-build-tool" class="anchor" href="#easypack---the-super-simple-js-and-css-build-tool"><span class="octicon octicon-link"></span></a>easypack - The super simple js and css build tool.</h3>
+        <h2>
+<a name="easypack---the-super-simple-js-and-css-build-tool" class="anchor" href="#easypack---the-super-simple-js-and-css-build-tool"><span class="octicon octicon-link"></span></a>easypack - The super simple js and css build tool.</h2>
 
-<p>This build tool will take you html file, and pickup all the static css and js files you have marked and will join them into single js and css files and will publish a new html file for you. It can also optionally do a simple minify (currently no bells and whistles) on js and css files. </p>
+<p>This build tool will take your html file, and pickup all the static css and js files you have marked and will join them into single js and css files and will publish a new html file for you. It can also optionally do a simple minify (currently no bells and whistles) on js and css files. </p>
 
-<p>Installation </p>
+<h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
 
 <pre><code>$ npm install easypack
 </code></pre>
 
-<p>Usage</p>
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
 
-<pre><code>var sb = require('easypack');
+<p>Create a build.js file like below and execute it using nodejs</p>
+
+<pre><code>/*
+* Sample build.js
+*/
+
+var sb = require('easypack');
 sb.build({
-  webRoot : 'test',
-    inputHtml : "main.html",
+    webRoot : 'test',
+    inputHtml : "main.html",  
     outputHtml : "index.html",
     jsBuildName : "app.js",
     timeStampBuild : true
 });
 </code></pre>
+
+<h3>
+<a name="marking-scripts-for-build" class="anchor" href="#marking-scripts-for-build"><span class="octicon octicon-link"></span></a>Marking scripts for build</h3>
+
+<p>Suppose the main html of your web site is main.html here is how to mark the scripts that build tool should bundle into one file.</p>
+
+<pre><code>&lt;script src='js/events.js' data-build="true"&gt;&lt;/script&gt;
+&lt;script src='js/ui.js' data-build="true"&gt;&lt;/script&gt;
+&lt;script src='js/main.js' data-build="true"&gt;&lt;/script&gt;
+&lt;script src='js/lib.js' &gt;&lt;/script&gt;
+</code></pre>
+
+<p>easypack will pick up the first three scripts in the list and combine them into one javasctipt file which you provided in options using 'jsbuild' option.
+Then a new html file will be generated at the same path as main.html, with the new combined script included. All the scripts that were not marked for building will be left alone.</p>
+
+<h3>
+<a name="timestamps" class="anchor" href="#timestamps"><span class="octicon octicon-link"></span></a>Timestamps</h3>
+
+<p>if 'timeStampBuild' is set to true, easypack will add a timestamp to the packed javascript file everytile you run the build script.
+For example:</p>
+
+<pre><code>&lt;script src="build/js/app-1375900584550.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Why do this? So that when you push put new code you can be sure that browsers will discard the cached copies of your old code and fetch a new one! </p>
 
 <h3>
 <a name="warning" class="anchor" href="#warning"><span class="octicon octicon-link"></span></a>Warning</h3>
