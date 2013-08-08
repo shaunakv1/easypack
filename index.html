@@ -34,7 +34,10 @@
         <h2>
 <a name="easypack---the-super-simple-js-and-css-build-tool" class="anchor" href="#easypack---the-super-simple-js-and-css-build-tool"><span class="octicon octicon-link"></span></a>easypack - The super simple js and css build tool.</h2>
 
-<p>This build tool will take your html file, and pickup all the static css and js files you have marked and will join them into single js and css files and will publish a new html file for you. It can also optionally do a simple minify (currently no bells and whistles) on js and css files. </p>
+<p>Ever wished you had in your fontend only webprojects, the cool feature of popular web-frameworks like rails that 
+preprocess all the static js and css files before pushing your webpages to production? Thats exactly easypacks does! </p>
+
+<p>Easypack will take your html file, and pickup all the static css and js files you have marked and will join them into single js and css files and will publish a new html file for you. It can also optionally do a simple minify (currently no bells and whistles) on js and css files. </p>
 
 <h3>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
@@ -64,12 +67,28 @@ sb.build({
 <h3>
 <a name="marking-scripts-for-build" class="anchor" href="#marking-scripts-for-build"><span class="octicon octicon-link"></span></a>Marking scripts for build</h3>
 
-<p>Suppose the main html of your web site is main.html here is how to mark the scripts that build tool should bundle into one file.</p>
+<p>Suppose the main html of your web site is main.html here is how to mark the scripts that build tool should bundle into one file.
+Notice the <strong>data-build="true"</strong> attribute in the script tags. Thats what marks scripts to be picked up. </p>
 
-<pre><code>&lt;script src='js/events.js' data-build="true"&gt;&lt;/script&gt;
+<pre><code>&lt;!-
+  Input: main.html
+-&gt;
+&lt;script src='js/events.js' data-build="true"&gt;&lt;/script&gt;
 &lt;script src='js/ui.js' data-build="true"&gt;&lt;/script&gt;
 &lt;script src='js/main.js' data-build="true"&gt;&lt;/script&gt;
 &lt;script src='js/lib.js' &gt;&lt;/script&gt;
+
+</code></pre>
+
+<p>After Build:</p>
+
+<pre><code>&lt;!-
+  Output: index.html
+-&gt;
+
+&lt;script src='js/lib.js' &gt;&lt;/script&gt;
+&lt;script src="build/js/app-1375900584550.js"&gt;&lt;/script&gt;
+
 </code></pre>
 
 <p>easypack will pick up the first three scripts in the list and combine them into one javasctipt file which you provided in options using 'jsbuild' option.
