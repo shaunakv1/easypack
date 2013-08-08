@@ -28,7 +28,7 @@ sb.build({
 	timeStampBuild : true
 });
 ```
-> Note that if you installed easypack within ther webroot of your website then leave ``` webRoot : '' ``` or donot provide this option. Optionally
+> Note: If you installed easypack within ther webroot of your website then leave ``` webRoot : '' ``` or donot provide this option. Optionally
 if you installed easypack outside your webroot, then provide a relative or absoloute path to webroot in your build script.
 
 ###Marking scripts for build
