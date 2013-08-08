@@ -3,7 +3,7 @@
 Ever wished you had in your fontend only webprojects, the cool feature of popular web-frameworks like rails that 
 preprocess all the static js and css files before pushing your webpages to production? Thats exactly easypacks does! 
 
-Easypack will take your html file, and pickup all the static css and js files you have marked and will join them into single js and css files and will publish a new html file for you. It can also optionally do a simple minify (currently no bells and whistles) on js and css files. 
+[Easypack](http://shaunakv1.github.io/easypack/) will take your html file, and pickup all the static css and js files you have marked and will join them into single js and css files and will publish a new html file for you. It can also optionally do a simple minify (currently no bells and whistles) on js and css files. 
 
 ###Installation 
 ```
