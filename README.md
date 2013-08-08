@@ -1,0 +1,21 @@
+easypack
+========
+
+A super simple build tool made in node to pack marked js and css files in a html file into single timestamped js and css file 
+
+##Steps of using this example
+
+1. Install [Node.js](http://nodejs.org/download/)
+
+2. At the same level as the main.html run
+```
+$ npm install easypack 
+```
+
+3. Then run the build.js 
+```
+$ node build.js
+```
+
+4. If all goes fine, you should see a index.html generated alongside main.html. Notice the difference between javascripts and css included between the two. 
+
