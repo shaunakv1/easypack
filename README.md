@@ -13,7 +13,7 @@ $ npm install easypack
 
 ###Usage
 Create a build.js file like below and execute it using nodejs
-```
+```js
 /*
 * Sample build.js
 */
@@ -32,7 +32,7 @@ sb.build({
 Suppose the main html of your web site is main.html here is how to mark the scripts that build tool should bundle into one file.
 Notice the **data-build="true"** attribute in the script tags. Thats what marks scripts to be picked up. 
 
-```
+```html
 <!-
   Input: main.html
 ->
@@ -44,7 +44,7 @@ Notice the **data-build="true"** attribute in the script tags. Thats what marks 
 ```
 After Build:
 
-```
+```html
 <!-
   Output: index.html
 ->
@@ -61,7 +61,7 @@ Then a new html file will be generated at the same path as main.html, with the n
 if 'timeStampBuild' is set to true, easypack will add a timestamp to the packed javascript file everytile you run the build script.
 For example:
 
-```
+```html
 <script src="build/js/app-1375900584550.js"></script>
 ```
 Why do this? So that when you push put new code you can be sure that browsers will discard the cached copies of your old code and fetch a new one! 
