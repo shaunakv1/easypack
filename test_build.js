@@ -3,7 +3,7 @@ sb.build({
 	webRoot : 'test',
 	inputHtml : "main.html",
 	outputHtml : "index.html",
-	jsBuildName : "apphaha.js",
+	jsBuildName : "app.js",
 	timeStampBuild : true
 });
 
