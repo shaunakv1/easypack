@@ -1,6 +1,6 @@
 {
   "name": "easypack",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is a very, very simple build tool to packege the js and css includes in a html file into one combined js and css (optionally minified) files",
   "main": "./lib/easypack",
   "bin": {
@@ -21,7 +21,8 @@
     "validator": "~1.4.0",
     "htmltidy": "~0.0.6",
     "uglify-js": "~2.3.6",
-    "wrench": "~1.5.1"
+    "wrench": "~1.5.1",
+    "uglifycss": "0.0.5"
   },
   "devDependencies": {},
   "scripts": {

@@ -4,6 +4,7 @@ sb.build({
 	inputHtml : "main.html",
 	outputHtml : "index.html",
 	jsBuildName : "app.js",
+	cssBuildName : "app-css.css",
 	timeStampBuild : true
 });
 
