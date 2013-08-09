@@ -91,7 +91,11 @@ $ node build.js
 
 
 ### Warning
+The support for packing css file is present too in exactly similar way as js files using parameter ```cssBuildName : "yourstyle.css"``` 
+but it needs some more refining and hence it is not mentioned above. Coming up soon! 
+
 The tool is in its very early stages, so be careful :) 
+
 
 
 ### Authors and Contributors
