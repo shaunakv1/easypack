@@ -100,3 +100,7 @@ The tool is in its very early stages, so be careful :)
 
 ### Authors and Contributors
 Shaunak Vairagare (@shaunakv1).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shaunakv1/easypack/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
