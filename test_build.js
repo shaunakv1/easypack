@@ -15,3 +15,18 @@ sb.build({
  * webRoot : 'test' # for relative path
  *
  */
+
+/*var styletto = require("styletto");
+
+var config = {
+    "input": ["test/css/styleA.css", "test/css/styleB.css","test/css/styleC.css", "test/css/font-awesome.css"],
+    "output": "test/build/css/output.css",
+    "compress": "csso",
+    "base64": 15000,
+    "errors": "ignore",
+    "path": process.cwd()
+}
+
+styletto( config, function(err, sucess, css ) {	
+	console.log("Compressing css done..");
+});*/

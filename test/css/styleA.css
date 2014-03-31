@@ -2,8 +2,15 @@
 	font-size: 30px;
 	font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
+	height: 50px;
+}
+
+.back-image{
+	background-image: url("../img/grad.png");
 }
 
 #a{
 	color: #373737;
 }
+
+
