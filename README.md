@@ -90,11 +90,17 @@ $ node build.js
 
 
 
-### Warning
-The support for packing css file is present too in exactly similar way as js files using parameter ```cssBuildName : "yourstyle.css"``` 
-but it needs some more refining and hence it is not mentioned above. Coming up soon! 
+### Update
 
-The tool is in its very early stages, so be careful :) 
+CSS build support completed. 
+
+Minify and build css files. base-64 encoding of images referenced in the css. Also resolves the url includes for things like fonts and included css to relative paths. 
+
+The support for packing css file is exactly similar way as js files using parameter ```cssBuildName : "yourstyle.css"``` 
+and add **data-build="true"** attribute in the css link tags
+
+
+
 
 
 
