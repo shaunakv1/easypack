@@ -52,7 +52,7 @@ preprocess all the static js and css files before pushing your webpages to produ
 
 <p>Create a build.js file like below and execute it using nodejs</p>
 
-<div class="highlight"><pre><span class="cm">/*</span>
+<div class="highlight highlight-js"><pre><span class="cm">/*</span>
 <span class="cm">* Sample build.js</span>
 <span class="cm">*/</span>
 
@@ -77,7 +77,7 @@ if you installed easypack outside your webroot, then provide a relative or absol
 <p>Suppose the main html of your web site is main.html here is how to mark the scripts that build tool should bundle into one file.
 Notice the <strong>data-build="true"</strong> attribute in the script tags. Thats what marks scripts to be picked up. </p>
 
-<div class="highlight"><pre><span class="cp">&lt;!-</span>
+<div class="highlight highlight-html"><pre><span class="cp">&lt;!-</span>
 <span class="cp">  Input: main.html</span>
 <span class="cp">-&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'js/events.js'</span> <span class="na">data-build=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/script&gt;</span>
@@ -89,7 +89,7 @@ Notice the <strong>data-build="true"</strong> attribute in the script tags. That
 
 <p>After Build:</p>
 
-<div class="highlight"><pre><span class="cp">&lt;!-</span>
+<div class="highlight highlight-html"><pre><span class="cp">&lt;!-</span>
 <span class="cp">  Output: index.html</span>
 <span class="cp">-&gt;</span>
 
@@ -107,7 +107,7 @@ Then a new html file will be generated at the same path as main.html, with the n
 <p>if 'timeStampBuild' is set to true, easypack will add a timestamp to the packed javascript file everytile you run the build script.
 For example:</p>
 
-<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"build/js/app-1375900584550.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"build/js/app-1375900584550.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div>
 
 <p>Why do this? So that when you push put new code you can be sure that browsers will discard the cached copies of your old code and fetch a new one! </p>
@@ -118,31 +118,35 @@ For example:</p>
 <ol>
 <li><p>Install <a href="http://nodejs.org/download/">Node.js</a></p></li>
 <li><p>Download <a href="https://github.com/shaunakv1/easypack/archive/examples.zip">examples</a></p></li>
-<li>
-<p>At the same level as the main.html install easypack:</p>
-
-<pre><code>$ npm install easypack 
+<li><p>At the same level as the main.html install easypack:</p></li>
+</ol><pre><code>$ npm install easypack 
 </code></pre>
-</li>
-<li>
-<p>Then run the build.js </p>
 
-<pre><code>$ node build.js
+<ol>
+<li>Then run the build.js </li>
+</ol><pre><code>$ node build.js
 </code></pre>
-</li>
-<li><p>Thats it! You should see a index.html generated alongside main.html. Notice the difference between javascripts and css included between the two. </p></li>
+
+<ol>
+<li>Thats it! You should see a index.html generated alongside main.html. Notice the difference between javascripts and css included between the two. </li>
 </ol><h3>
-<a name="warning" class="anchor" href="#warning"><span class="octicon octicon-link"></span></a>Warning</h3>
+<a name="update" class="anchor" href="#update"><span class="octicon octicon-link"></span></a>Update</h3>
 
-<p>The support for packing css file is present too in exactly similar way as js files using parameter <code>cssBuildName : "yourstyle.css"</code> 
-but it needs some more refining and hence it is not mentioned above. Coming up soon! </p>
+<p>CSS build support completed. </p>
 
-<p>The tool is in its very early stages, so be careful :) </p>
+<p>Minify and build css files. base-64 encoding of images referenced in the css. Also resolves the url includes for things like fonts and included css to relative paths. </p>
+
+<p>The support for packing css file is exactly similar way as js files using parameter <code>cssBuildName : "yourstyle.css"</code> 
+and add <strong>data-build="true"</strong> attribute in the css link tags</p>
 
 <h3>
 <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
 <p>Shaunak Vairagare (<a href="https://github.com/shaunakv1" class="user-mention">@shaunakv1</a>).</p>
+
+<p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/shaunakv1/easypack/trend.png" alt="Bitdeli Badge"></a></p>
+
+<p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/shaunakv1/easypack/trend.png" alt="Bitdeli Badge"></a></p>
       </section>
     </div>
 
